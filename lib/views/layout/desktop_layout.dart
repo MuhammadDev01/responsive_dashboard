@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/views/widgets/custom_center_widget.dart';
 import 'package:responsive_dashboard/views/widgets/custom_drawer.dart';
 
 class DesktopLayout extends StatelessWidget {
@@ -9,17 +10,15 @@ class DesktopLayout extends StatelessWidget {
     return Row(
       children: [
         const Expanded(flex: 2, child: CustomDrawer()),
+        const Expanded(flex: 5, child: CustomCenterWidget()),
         Expanded(
-            flex: 5,
-            child: Container(
-              color: Colors.amber,
-            )),
-        Expanded(
-            flex: 3,
-            child: Container(
-              color: Colors.red,
-            )),
+          flex: 3,
+          child: Container(
+            color: Colors.red,
+          ),
+        ),
       ],
     );
   }
 }
+
