@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_dashboard/utils/app_images.dart';
@@ -68,7 +67,7 @@ class ExpensesBlueItemHeader extends StatelessWidget {
           backgroundColor: Colors.white.withOpacity(0.1),
           child: SvgPicture.asset(
             Assets.imagesBalance,
-            color: Colors.white,
+            colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
           ),
         ),
         const Icon(

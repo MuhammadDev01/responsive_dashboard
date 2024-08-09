@@ -18,6 +18,7 @@ class CustomListTile extends StatelessWidget {
       elevation: 0.0,
       color: const Color(0xffFAFAFA),
       child: ListTile(
+        contentPadding: EdgeInsets.zero,
         leading: SvgPicture.asset(
           image,
         ),

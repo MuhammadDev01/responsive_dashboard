@@ -16,7 +16,7 @@ class DrawerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TweenAnimationBuilder(
-      tween: Tween<double>(begin: 1.0, end: isActive ? 1.05 : 1.0),
+      tween: Tween<double>(begin: 1.0, end: isActive ? 1.01 : 1.0),
       duration: const Duration(milliseconds: 300),
       builder: (context, double scale, child) {
         return Transform.scale(
@@ -27,6 +27,7 @@ class DrawerItem extends StatelessWidget {
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 500),
         child: ListTile(
+          contentPadding: EdgeInsets.zero,
           leading: SvgPicture.asset(
             item.image,
           ),

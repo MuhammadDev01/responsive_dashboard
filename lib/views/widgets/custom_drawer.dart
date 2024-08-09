@@ -11,6 +11,7 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.only(left: 28, right: 20),
       color: Colors.white,
       child: const CustomScrollView(
         slivers: [
@@ -26,12 +27,17 @@ class CustomDrawer extends StatelessWidget {
               subtitle: 'demo@gmail.com',
             ),
           ),
+          SliverToBoxAdapter(
+            child: SizedBox(
+              height: 20,
+            ),
+          ),
           DrawerItemsListView(),
           SliverFillRemaining(
             hasScrollBody: false,
             child: Column(
               children: [
-                Expanded(child: SizedBox()),
+                Spacer(),
                 DrawerItem(
                   item: DrawerItemModel(
                     image: Assets.imagesSettings,
