@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:responsive_dashboard/utils/app_images.dart';
 
 class ExpensesItemHeader extends StatelessWidget {
-  const ExpensesItemHeader({super.key});
-
+  const ExpensesItemHeader({super.key, required this.image});
+  final String image;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -13,7 +12,7 @@ class ExpensesItemHeader extends StatelessWidget {
         CircleAvatar(
           radius: 30,
           backgroundColor: const Color(0xffFAFAFA),
-          child: SvgPicture.asset(Assets.imagesExpenses),
+          child: SvgPicture.asset(image),
         ),
         const Icon(
           Icons.arrow_forward_ios_outlined,
