@@ -18,7 +18,7 @@ class ExpensesItem extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
-        crossAxisAlignment:CrossAxisAlignment.start ,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ExpensesItemHeader(
             image: model.avatarImage,
@@ -34,14 +34,14 @@ class ExpensesItem extends StatelessWidget {
             height: 8,
           ),
           Text(
-            model.date,
+            'April 2022',
             style: AppStyles.styleRegular14(context),
           ),
           const SizedBox(
             height: 16,
           ),
           Text(
-            model.price,
+            r'$20,129',
             style: AppStyles.styleSemiBold24(context),
           ),
         ],

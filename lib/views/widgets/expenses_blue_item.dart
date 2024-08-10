@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:responsive_dashboard/utils/app_images.dart';
+import 'package:responsive_dashboard/models/expenses_item_model.dart';
 import 'package:responsive_dashboard/utils/app_styles.dart';
 
-class ExpensesBlueItem extends StatelessWidget {
-  const ExpensesBlueItem({
+class ActiveExpensesItem extends StatelessWidget {
+  const ActiveExpensesItem({
     super.key,
+    required this.model,
   });
+  final ExpensesItemModel model;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,12 +20,14 @@ class ExpensesBlueItem extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ExpensesBlueItemHeader(),
+          ExpensesBlueItemHeader(
+            image: model.avatarImage,
+          ),
           const SizedBox(
             height: 34,
           ),
           Text(
-            'Balance',
+            model.title,
             style: AppStyles.styleSemiBold16(context).copyWith(
               color: Colors.white,
             ),
@@ -55,7 +59,9 @@ class ExpensesBlueItem extends StatelessWidget {
 class ExpensesBlueItemHeader extends StatelessWidget {
   const ExpensesBlueItemHeader({
     super.key,
+    required this.image,
   });
+  final String image;
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +72,7 @@ class ExpensesBlueItemHeader extends StatelessWidget {
           radius: 30,
           backgroundColor: Colors.white.withOpacity(0.1),
           child: SvgPicture.asset(
-            Assets.imagesBalance,
+            image,
             colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
           ),
         ),

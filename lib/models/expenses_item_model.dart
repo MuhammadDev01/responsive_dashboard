@@ -1,9 +1,7 @@
 class ExpensesItemModel {
-  final String avatarImage, title, date, price;
+  final String avatarImage, title;
+  bool isActive;
 
   ExpensesItemModel(
-      {required this.avatarImage,
-      required this.title,
-      required this.date,
-      required this.price});
+      {required this.avatarImage, required this.title, required this.isActive});
 }
