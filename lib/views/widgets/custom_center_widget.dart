@@ -17,12 +17,10 @@ class CustomCenterWidget extends StatelessWidget {
             SizedBox(
               height: 24,
             ),
-            QuickInvoiceWidget(),
+            Expanded(child: QuickInvoiceWidget()),
           ],
         ),
       ),
     );
   }
 }
-
-
