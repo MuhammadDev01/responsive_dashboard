@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/views/widgets/all_expenses_widget.dart';
+import 'package:responsive_dashboard/views/widgets/quick_invoice_widget.dart';
 
 class CustomCenterWidget extends StatelessWidget {
   const CustomCenterWidget({super.key});
@@ -13,10 +14,15 @@ class CustomCenterWidget extends StatelessWidget {
         child: Column(
           children: [
             AllExpensesWidget(),
-            //QuickInvoiceWidget(),
+            SizedBox(
+              height: 24,
+            ),
+            QuickInvoiceWidget(),
           ],
         ),
       ),
     );
   }
 }
+
+
