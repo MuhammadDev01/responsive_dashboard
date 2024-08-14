@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/views/widgets/customer_details.dart';
 import 'package:responsive_dashboard/views/widgets/customer_details_grid.dart';
 import 'package:responsive_dashboard/views/widgets/latest_transaction_widget.dart';
+import 'package:responsive_dashboard/views/widgets/quick_invoice_buttons.dart';
 import 'package:responsive_dashboard/views/widgets/quick_invoice_header.dart';
 
 class QuickInvoiceWidget extends StatelessWidget {
@@ -27,6 +27,10 @@ class QuickInvoiceWidget extends StatelessWidget {
             color: Color(0xffF1F1F1),
           ),
           CustomerDetailsGrid(),
+          SizedBox(
+            height: 24,
+          ),
+          QuickInvoiceButtons(),
         ],
       ),
     );
