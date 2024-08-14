@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/models/customer_model.dart';
 import 'package:responsive_dashboard/utils/app_styles.dart';
-import 'package:responsive_dashboard/views/widgets/list_tile_latest_transaction_list_view.dart';
+import 'package:responsive_dashboard/views/widgets/custom_text_field.dart';
 
-class LatestTransactionWidget extends StatelessWidget {
-  const LatestTransactionWidget({super.key});
-
+class CustomerDetails extends StatelessWidget {
+  const CustomerDetails({super.key, required this.model});
+  final CustomerModel model;
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Latest Transaction',
+          model.title,
           style: AppStyles.styleMedium16(context),
         ),
         const SizedBox(
           height: 12,
         ),
-        const LatestTransactionListView(),
+        CustomTextField(hint: model.hint),
       ],
     );
   }
