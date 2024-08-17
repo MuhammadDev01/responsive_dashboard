@@ -11,10 +11,11 @@ class LastSection extends StatelessWidget {
       child: ListView(
         children: const [
           MyCardAndTransactionHistory(),
-          //Transaction History()
+          
           //IncomeDetails()
         ],
       ),
     );
   }
 }
+
