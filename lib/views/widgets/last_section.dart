@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/views/widgets/my_card.dart';
+import 'package:responsive_dashboard/views/widgets/my_card_and_transaction_history.dart';
 
 class LastSection extends StatelessWidget {
   const LastSection({super.key});
@@ -7,13 +7,10 @@ class LastSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(24),
-      margin: const EdgeInsets.only(top: 40,right: 32),
-      decoration: BoxDecoration(
-          color: Colors.white, borderRadius: BorderRadius.circular(12)),
+      color: const Color(0xffFAFAFA),
       child: ListView(
         children: const [
-          MyCard(),
+          MyCardAndTransactionHistory(),
           //Transaction History()
           //IncomeDetails()
         ],
