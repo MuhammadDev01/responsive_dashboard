@@ -9,7 +9,6 @@ class MyCardAndTransactionHistory extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(24),
-      margin: const EdgeInsets.only(top: 40, right: 32),
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(12)),
       child: const Column(

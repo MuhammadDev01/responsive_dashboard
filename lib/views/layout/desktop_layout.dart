@@ -8,12 +8,15 @@ class DesktopLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      children: [
-        Expanded(flex: 2, child: CustomDrawer()),
-        Expanded(flex: 5, child: CustomCenterWidget()),
-        Expanded(flex: 3, child: LastSection()),
-      ],
+    return Container(
+      color: const Color(0xffFAFAFA),
+      child: const Row(
+        children: [
+          Expanded(flex: 2, child: CustomDrawer()),
+          Expanded(flex: 5, child: CustomCenterWidget()),
+          Expanded(flex: 3, child: LastSection()),
+        ],
+      ),
     );
   }
 }

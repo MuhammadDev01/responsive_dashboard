@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/views/widgets/income_details.dart';
 import 'package:responsive_dashboard/views/widgets/my_card_and_transaction_history.dart';
 
 class LastSection extends StatelessWidget {
@@ -7,15 +8,16 @@ class LastSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color(0xffFAFAFA),
+      margin: const EdgeInsets.only(top: 40, right: 32),
       child: ListView(
         children: const [
           MyCardAndTransactionHistory(),
-          
-          //IncomeDetails()
+          SizedBox(
+            height: 24,
+          ),
+          IncomeDetails(),
         ],
       ),
     );
   }
 }
-

@@ -8,19 +8,16 @@ class CustomCenterWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: const Color(0xffFAFAFA),
-      child:  Padding(
-        padding: const EdgeInsets.only(top: 40, right: 24, left: 32, bottom: 32),
-        child: ListView(
-          children: const [
-            AllExpensesWidget(),
-            SizedBox(
-              height: 24,
-            ),
-            QuickInvoiceWidget(),
-          ],
-        ),
+    return Padding(
+      padding: const EdgeInsets.only(top: 40, right: 24, left: 32, bottom: 32),
+      child: ListView(
+        children: const [
+          AllExpensesWidget(),
+          SizedBox(
+            height: 24,
+          ),
+          QuickInvoiceWidget(),
+        ],
       ),
     );
   }
