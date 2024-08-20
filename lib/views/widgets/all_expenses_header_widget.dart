@@ -25,4 +25,3 @@ class _AllExpensesHeaderWidgetState extends State<AllExpensesHeaderWidget> {
     );
   }
 }
-

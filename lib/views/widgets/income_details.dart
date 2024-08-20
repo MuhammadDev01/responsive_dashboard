@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/views/widgets/income_chart_and_details_widget.dart';
 import 'package:responsive_dashboard/views/widgets/income_details_header.dart';
 
 class IncomeDetails extends StatelessWidget {
@@ -7,7 +8,7 @@ class IncomeDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(24),
+      padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(12)),
       child: const Column(
@@ -16,6 +17,7 @@ class IncomeDetails extends StatelessWidget {
           SizedBox(
             height: 16,
           ),
+          IncomeChartAndDetailsWidget(),
         ],
       ),
     );
