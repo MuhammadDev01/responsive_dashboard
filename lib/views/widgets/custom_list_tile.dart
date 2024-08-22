@@ -15,23 +15,20 @@ class CustomListTile extends StatelessWidget {
     return Card(
       elevation: 0.0,
       color: const Color(0xffFAFAFA),
-      child: Padding(
-      padding: const EdgeInsets.all(12.0),
-        child: ListTile(
-          contentPadding: EdgeInsets.zero,
-          leading: SvgPicture.asset(
-            model.image,
+      child: ListTile(
+        contentPadding: const EdgeInsets.symmetric(horizontal: 8,vertical: 6),
+        leading: SvgPicture.asset(
+          model.image,
+        ),
+        title: Text(
+          model.name,
+          style: AppStyles.styleSemiBold16(context).copyWith(
+            color: const Color(0xff064061),
           ),
-          title: Text(
-            model.name,
-            style: AppStyles.styleSemiBold16(context).copyWith(
-              color: const Color(0xff064061),
-            ),
-          ),
-          subtitle: Text(
-            model.email,
-            style: AppStyles.styleRegular12(context),
-          ),
+        ),
+        subtitle: Text(
+          model.email,
+          style: AppStyles.styleRegular12(context),
         ),
       ),
     );

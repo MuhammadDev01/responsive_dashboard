@@ -14,7 +14,7 @@ class CustomDrawer extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.only(left: 28, right: 20),
       color: Colors.white,
-      child:  const CustomScrollView(
+      child: const CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
             child: SizedBox(
@@ -22,11 +22,14 @@ class CustomDrawer extends StatelessWidget {
             ),
           ),
           SliverToBoxAdapter(
-            child: CustomListTile(
-              model: UserInfoModel(
-                image: Assets.imagesAvatar3,
-                name: 'Lekan Okeowo',
-                email: 'demo@gmail.com',
+            child: Flexible(
+              fit: FlexFit.loose,
+              child: CustomListTile(
+                model: UserInfoModel(
+                  image: Assets.imagesAvatar3,
+                  name: 'Lekan Okeowo',
+                  email: 'demo@gmail.com',
+                ),
               ),
             ),
           ),

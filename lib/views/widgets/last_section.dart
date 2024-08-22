@@ -8,14 +8,17 @@ class LastSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 40, right: 32),
-      child: ListView(
-        children: const [
+      margin: const EdgeInsets.only(top: 40),
+      child: const Column(
+        children: [
           MyCardAndTransactionHistory(),
           SizedBox(
             height: 24,
           ),
           IncomeDetails(),
+          SizedBox(
+            height: 32,
+          ),
         ],
       ),
     );

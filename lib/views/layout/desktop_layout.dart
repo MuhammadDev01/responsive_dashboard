@@ -12,9 +12,33 @@ class DesktopLayout extends StatelessWidget {
       color: const Color(0xffFAFAFA),
       child: const Row(
         children: [
-          Expanded(flex: 2, child: CustomDrawer()),
-          Expanded(flex: 5, child: CustomCenterWidget()),
-          Expanded(flex: 3, child: LastSection()),
+          Expanded(child: CustomDrawer()),
+          Expanded(
+            flex: 5,
+            child: CustomScrollView(
+              slivers: [
+                SliverFillRemaining(
+                  hasScrollBody: false,
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        width: 28,
+                      ),
+                      Expanded(flex: 3, child: CustomCenterWidget()),
+                      SizedBox(
+                        width: 28,
+                      ),
+                      Expanded(flex: 2, child: LastSection()),
+                      
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            width: 28,
+          ),
         ],
       ),
     );
