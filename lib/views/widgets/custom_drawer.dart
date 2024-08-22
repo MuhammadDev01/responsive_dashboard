@@ -14,22 +14,20 @@ class CustomDrawer extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.only(left: 28, right: 20),
       color: Colors.white,
+      width: 280,
       child: const CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
             child: SizedBox(
-              height: 100,
+              height: 80,
             ),
           ),
           SliverToBoxAdapter(
-            child: Flexible(
-              fit: FlexFit.loose,
-              child: CustomListTile(
-                model: UserInfoModel(
-                  image: Assets.imagesAvatar3,
-                  name: 'Lekan Okeowo',
-                  email: 'demo@gmail.com',
-                ),
+            child: CustomListTile(
+              model: UserInfoModel(
+                image: Assets.imagesAvatar3,
+                name: 'Lekan Okeowo',
+                email: 'demo@gmail.com',
               ),
             ),
           ),

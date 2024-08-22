@@ -8,17 +8,14 @@ class CustomCenterWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(top: 40),
-      child: Column(
-        children: [
-          AllExpensesWidget(),
-          SizedBox(
-            height: 24,
-          ),
-          QuickInvoiceWidget(),
-        ],
-      ),
+    return const Column(
+      children: [
+        AllExpensesWidget(),
+        SizedBox(
+          height: 24,
+        ),
+        QuickInvoiceWidget(),
+      ],
     );
   }
 }

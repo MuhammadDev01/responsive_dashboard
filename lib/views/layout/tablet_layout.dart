@@ -9,19 +9,19 @@ class TabletLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Row(children: [
-      Expanded(
-        child: CustomDrawer(),
-      ),
+      CustomDrawer(),
       SizedBox(
         width: 28,
       ),
       Expanded(
-        flex: 3,
         child: CustomScrollView(
           slivers: [
             SliverFillRemaining(
               hasScrollBody: false,
               child: Column(children: [
+                SizedBox(
+                  height: 40,
+                ),
                 CustomCenterWidget(),
                 LastSection(),
               ]),
