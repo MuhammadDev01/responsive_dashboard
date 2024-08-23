@@ -15,6 +15,9 @@ class ActiveExpensesItem extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
       decoration: BoxDecoration(
         color: const Color(0xff4EB7F2),
+        border: Border.all(
+          color: const Color(0xff4EB7F2),
+        ),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
@@ -26,28 +29,37 @@ class ActiveExpensesItem extends StatelessWidget {
           const SizedBox(
             height: 34,
           ),
-          Text(
-            model.title,
-            style: AppStyles.styleSemiBold16(context).copyWith(
-              color: Colors.white,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              model.title,
+              style: AppStyles.styleSemiBold16(context).copyWith(
+                color: Colors.white,
+              ),
             ),
           ),
           const SizedBox(
             height: 8,
           ),
-          Text(
-            'April 2022',
-            style: AppStyles.styleRegular14(context).copyWith(
-              color: Colors.white,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              'April 2022',
+              style: AppStyles.styleRegular14(context).copyWith(
+                color: Colors.white,
+              ),
             ),
           ),
           const SizedBox(
             height: 16,
           ),
-          Text(
-            r'$20,129',
-            style: AppStyles.styleSemiBold24(context).copyWith(
-              color: Colors.white,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              r'$20,129',
+              style: AppStyles.styleSemiBold24(context).copyWith(
+                color: Colors.white,
+              ),
             ),
           ),
         ],
@@ -73,7 +85,8 @@ class ExpensesBlueItemHeader extends StatelessWidget {
           backgroundColor: Colors.white.withOpacity(0.1),
           child: SvgPicture.asset(
             image,
-            colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+            colorFilter:
+                const ColorFilter.mode(Colors.white, BlendMode.srcIn),
           ),
         ),
         const Icon(

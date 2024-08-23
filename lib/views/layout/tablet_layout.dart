@@ -16,14 +16,18 @@ class TabletLayout extends StatelessWidget {
       Expanded(
         child: CustomScrollView(
           slivers: [
-            SliverFillRemaining(
-              hasScrollBody: false,
-              child: Column(children: [
-                SizedBox(
-                  height: 40,
-                ),
-                CustomCenterWidget(),
-              ]),
+            SliverToBoxAdapter(
+              child: SizedBox(
+                height: 40,
+              ),
+            ),
+            SliverToBoxAdapter(
+              child: CustomCenterWidget(),
+            ),
+            SliverToBoxAdapter(
+              child: SizedBox(
+                height: 20,
+              ),
             ),
             SliverToBoxAdapter(child: LastSection()),
           ],
