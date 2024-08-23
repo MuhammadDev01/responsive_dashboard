@@ -8,7 +8,6 @@ class IncomeChartItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         CircleAvatar(
           radius: 5,
@@ -18,7 +17,6 @@ class IncomeChartItem extends StatelessWidget {
           width: 12,
         ),
         Expanded(
-          flex: 3,
           child: Text(
             model.title,
             overflow: TextOverflow.ellipsis,
@@ -30,7 +28,6 @@ class IncomeChartItem extends StatelessWidget {
           style: AppStyles.styleMedium16(context)
               .copyWith(color: const Color(0xff208CC8)),
         ),
-        const Spacer(),
       ],
     );
   }

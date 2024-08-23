@@ -7,17 +7,14 @@ class IncomeChartAndDetailsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(
-      height: 100,
-      child: Row(
-        children: [
-          IncomeChart(),
-          SizedBox(
-            width: 40,
-          ),
-          IncomeChartListView(),
-        ],
-      ),
+    return const Row(
+      children: [
+        SizedBox(height: 120, child: IncomeChart()),
+        SizedBox(
+          width: 40,
+        ),
+        Expanded(child: IncomeChartListView()),
+      ],
     );
   }
 }

@@ -28,14 +28,12 @@ class IncomeChartListView extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Column(
-        children: items
-            .map(
-              (e) => IncomeChartItem(model: e),
-            )
-            .toList(),
-      ),
+    return Column(
+      children: items
+          .map(
+            (e) => IncomeChartItem(model: e),
+          )
+          .toList(),
     );
   }
 }
