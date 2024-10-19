@@ -13,13 +13,11 @@ class AllExpensesWidget extends StatelessWidget {
       color: Colors.white,
       ),
       padding: const EdgeInsets.all(20.0),
-      child: const Expanded(
-        child: Column(
-          children: [
-            AllExpensesHeaderWidget(),
-            ExpensesItems(),
-          ],
-        ),
+      child: const Column(
+        children: [
+          AllExpensesHeaderWidget(),
+          ExpensesItems(),
+        ],
       ),
     );
   }
